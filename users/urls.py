@@ -8,7 +8,7 @@ urlpatterns = [
     path('up/client', RegistrationController.as_view(template_name='users/client_registration.html',
                                                      model_form=NewClientForm), name='reg_client'),
     path('in', SignInController.as_view(), name='authentication'),
-    path('profile/user', ProfileController.as_view(), name='seller_profile'),
-    path('profile/user', ProfileController.as_view(template_name='users/client_profile.html', model=Client),
+    path('profile/user/seller', ProfileController.as_view(), name='seller_profile'),
+    path('profile/user/client', ProfileController.as_view(template_name='users/client_profile.html', model=Client),
          name='client_profile')
 ]
